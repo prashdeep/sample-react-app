@@ -6,6 +6,8 @@ import './index';
         const header = 
             <div className="header">
                 Header Component
+
+                <h1>{this.props.text}</h1>
             </div>;
 
         return (
