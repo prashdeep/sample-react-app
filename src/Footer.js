@@ -1,5 +1,5 @@
 import React from 'react';
-
+/*
 export class Footer extends React.Component{
     render (){
         return (
@@ -8,4 +8,13 @@ export class Footer extends React.Component{
             </div>
         )
     }
+}*/
+
+export function Footer (){
+    return (
+        <div>
+            <h1>Footer Begins !!</h1>
+            
+        </div>
+    );
 }
