@@ -1,18 +1,7 @@
 import React from 'react';
 
-export class User extends React.Component{
-
-    constructor(props){
-        super(props);
-        this.state={
-            selected:false,
-
-        }
-    }
-
+export class Product extends React.Component{
     render(){
-        console.log("executing the render method in the User component ");
-        console.log(this.state);
         return (
             <div className="col-md-4">
                 <div className="card text-center">
@@ -24,9 +13,9 @@ export class User extends React.Component{
                         <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
                         <button className="btn btn-primary" onClick = {
                                     ()=>{
-                                       
-                                            this.setState({selected: !this.state.selected});
-                                       
+                                        console.log('came after the button is clicked.. ')
+                                       this.props.click('test');
+
                                     }
                                 }>Details</button>
                     </div>

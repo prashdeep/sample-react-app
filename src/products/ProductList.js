@@ -1,18 +1,17 @@
 import React, {Component} from 'react';
-import { User } from './User';
+import { Product } from './Product';
 
 
 
-let printFunc = function(data){
-    console.log('called from the print function inside UserList component');
-    console.log(data);
+let handleSubmit = function(product){
+    console.log('came inside the handle submit function ', product);
 }
 
-export class UserList extends Component {
+export class ProductList extends Component {
     constructor(props){
         super(props);
         this.state = {
-            users:[   
+            products:[   
                 {
                     id:1,
                     name:'Vivo',
@@ -36,10 +35,11 @@ export class UserList extends Component {
     render(){
                 return (
                 <div className="row">
-                    <h1>Users Length : {this.state.users.length}</h1>
-                    {this.state.users.map(user => {
-                    return <User  key={user.id} data={user} print={printFunc}/>
-                    })}
+                   <h1>Number of Products : {this.state.products.length}</h1>
+                   {
+                       this.state.products.map(product =>
+                        <Product key={product.id} data = {product} click={handleSubmit}/>
+                    )}
                 </div>
             );
     }
