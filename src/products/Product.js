@@ -13,11 +13,9 @@ export class Product extends React.Component{
                         <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
                         <button className="btn btn-primary" onClick = {
                                     ()=>{
-                                        console.log('came after the button is clicked.. ')
-                                       this.props.click('test');
-
+                                       this.props.click(this.props.data);
                                     }
-                                }>Details</button>
+                                }>Select</button>
                     </div>
                     <div className="card-footer text-muted">
                         {this.props.data.team}
